@@ -14,7 +14,7 @@
       shell: sudo dpkg -i -E ./amazon-cloudwatch-agent.deb
 
     - name: Moving config
-      shell: sudo mv /home/ubuntu/ansible_repo/cloudwatch/cloudwatch_config.json /opt/aws/amazon-cloudwatch-agent/bin
+      shell: sudo mv /home/siemens/ansible_repo/cloudwatch/cloudwatch_config.json /opt/aws/amazon-cloudwatch-agent/bin
 
     - name: Starting cwagent
       shell: sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl -a fetch-config -m ec2 -s -c file:/opt/aws/amazon-cloudwatch-agent/bin/cloudwatch_config.json
