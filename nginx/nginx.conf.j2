@@ -19,6 +19,8 @@ http {
     server {
         listen 80;
         server_name test.example.com;
+	access_log /var/log/nginx/nginx.vhost.access.log;
+        error_log /var/log/nginx/nginx.vhost.error.log;
         location / {
             root /var/www/html;
             index index.html;
