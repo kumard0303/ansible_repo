@@ -7,7 +7,9 @@
       "files": {
         "collect_list": [
           {
-            "file_path": "/var/log/nginx/nginx.vhost.access.log;"
+            "file_path": "/var/log/nginx/nginx.vhost.access.log",
+            "log_group_name": "nextcloud.log",
+            "log_stream_name": "{local_hostname}"
           }
         ]
       }
@@ -19,21 +21,6 @@
         "metrics_aggregation_interval": 60,
         "metrics_collection_interval": 60,
         "service_address": ":8125"
-      },
-      "disk": {
-        "measurement":[
-                 "used_percent"
-        ],
-        "metrics_collection_interval": 60,
-        "resources":[
-                  "*"
-        ]
-      },
-      "mem": {
-          "measurement": [
-                     "mem_used_percent"
-          ],
-          "metrics_collection_interval": 60
       }
     }
   }
